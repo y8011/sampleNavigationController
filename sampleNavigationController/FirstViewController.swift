@@ -14,6 +14,7 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
 
     // 一つ目のボタンは、ボタンからセグエをつけたので、遷移してからAlertが出てしまう
     // アラートの表示はコメントアウトしておきます。
