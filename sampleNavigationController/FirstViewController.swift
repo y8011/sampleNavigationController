@@ -15,21 +15,24 @@ class FirstViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // 一つ目のボタンは、ボタンからセグエをつけたので、遷移してからAlertが出てしまう
+    // アラートの表示はコメントアウトしておきます。
     @IBAction func tapFirstButton(_ sender: UIButton) {
         //　1 アラートのベースを作る
-        let alertController = UIAlertController(title: "", message: "お風呂で使うものは？", preferredStyle: .alert)
-        
-        //2 ボタンを追加　追加したいボタンの数だけaddAction
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-        // 3 アラートを表示
-        present(alertController,
-                animated: true,
-                completion: nil
-        )
+//        let alertController = UIAlertController(title: "", message: "お風呂で使うものは？", preferredStyle: .alert)
+//
+//        //2 ボタンを追加　追加したいボタンの数だけaddAction
+//        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//
+//        // 3 アラートを表示
+//        present(alertController,
+//                animated: true,
+//                completion: nil
+//        )
     }
+    
     // 戻ってきたときに発動する関数を先に書いて
-    // StroryboadでButtonからFirstViewController のExitへ繋ぐことで戻れる
+    // StroryboadでButtonからExitへ繋ぐことで戻れる
     @IBAction func backFromSecondView(segue:UIStoryboardSegue){
         print("戻ってきたよ")
     }
